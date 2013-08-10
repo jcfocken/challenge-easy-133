@@ -4,7 +4,7 @@ http://www.reddit.com/r/dailyprogrammer/comments/1iambu/071513_challenge_133_eas
 '''
 
 f = open("movements.txt", 'r')
-num_of_moves = moves.readline()
+num_of_moves = f.readline()
 rooms = []
 
 
@@ -30,7 +30,7 @@ class room():
 		self.total_time += self.visit_duration	
 
 
-for move in moves.readlines():
+for move in f.readlines():
 	vis_id, room_index, direction, time = move.split()
 	
 	vis_id = int(vis_id)
